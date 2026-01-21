@@ -1,0 +1,23 @@
+name: Run cpp app on different systems
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04-arm]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Compile
+      run: g++ main.cpp -o output
+    - name: Run app
+      run: ./output

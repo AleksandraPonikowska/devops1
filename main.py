@@ -1,6 +1,6 @@
 def kwadrat(liczba):
     """
-    Zwraca kwadrat liczby liczby
+    Zwraca kwadrat liczby liczby !!!!
 
     :param liczba: Liczba podnoszona do kwadratu
     :type liczba: int

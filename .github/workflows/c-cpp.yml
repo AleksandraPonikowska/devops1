@@ -15,9 +15,12 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+
     - name: Checkout repository
       uses: actions/checkout@v4
+
     - name: Compile
       run: g++ main.cpp -o output
+      
     - name: Run app
       run: ./output
